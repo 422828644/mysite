@@ -43,8 +43,10 @@ class Fruit(models.Model):
 
 
 class Manufacturer(models.Model):
+    name = models.CharField("制造商名称", max_length=100, null=True)
     pass
 
 
 class Car(models.Model):
+    name = models.CharField("汽车名称", max_length=100, null=True)
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
